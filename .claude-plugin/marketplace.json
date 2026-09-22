@@ -1,0 +1,19 @@
+{
+  "name": "dev-stack-installer",
+  "owner": {
+    "name": "icedracon",
+    "url": "https://github.com/icedracon"
+  },
+  "metadata": {
+    "description": "Meta-installer + 18 skills across design, code quality, and ops. Scans a repo and recommends the matching skill bundle.",
+    "version": "0.1.1",
+    "repository": "https://github.com/icedracon/dev-stack-installer"
+  },
+  "plugins": [
+    {
+      "name": "dev-stack-installer",
+      "description": "One skill scans your repo, detects the stack (frontend/backend/mobile/infra/data/product), and recommends the matching bundle of 18 skills: design (figma-handoff, tokens, ui-audit, component-doc), code quality (rust-clippy-strict, python-typing-uplift, ts-strict-migrate, sql-review, api-contract-check, dep-audit, test-gap-finder, env-vars-audit, readme-doctor, perf-budget), and ops (docker-slim, github-actions-audit, migration-writer).",
+      "source": "./"
+    }
+  ]
+}
