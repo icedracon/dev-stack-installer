@@ -1,0 +1,20 @@
+{
+  "name": "dev-stack-installer",
+  "version": "0.1.0",
+  "description": "Scans a repo, detects the stack, and recommends/installs the matching Claude Code skills, plugins, and hooks — one bundle per detected layer (design, code-quality, ops, data, growth, always-on).",
+  "author": {
+    "name": "icedracon",
+    "url": "https://github.com/icedracon"
+  },
+  "homepage": "https://github.com/icedracon/dev-stack-installer",
+  "repository": "https://github.com/icedracon/dev-stack-installer",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "skills",
+    "plugin",
+    "stack-detection",
+    "auto-install",
+    "setup"
+  ]
+}
