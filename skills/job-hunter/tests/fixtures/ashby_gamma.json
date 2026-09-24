@@ -1,0 +1,30 @@
+{
+ "jobs": [
+  {
+   "id": "11111111-2222-4333-8444-555555555555",
+   "title": "Security Engineer, Detection & Response",
+   "location": "Remote",
+   "secondaryLocations": [
+    {
+     "location": "Armenia"
+    }
+   ],
+   "isRemote": true,
+   "workplaceType": "Remote",
+   "isListed": true,
+   "publishedAt": "2026-09-15T00:00:00.000Z",
+   "jobUrl": "https://jobs.ashbyhq.com/gamma/11111111-2222-4333-8444-555555555555",
+   "applyUrl": "https://jobs.ashbyhq.com/gamma/11111111-2222-4333-8444-555555555555/application",
+   "descriptionHtml": "<p>3+ years experience in detection engineering. Sigma, EDR, SIEM (Splunk), Python.</p>",
+   "compensation": {
+    "compensationTierSummary": "$90K \u2013 $120K"
+   }
+  },
+  {
+   "id": "11111111-2222-4333-8444-000000000000",
+   "title": "Unlisted Red Team Lead",
+   "isListed": false,
+   "location": "Remote"
+  }
+ ]
+}

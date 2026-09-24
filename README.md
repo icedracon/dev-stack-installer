@@ -40,6 +40,13 @@ Ships with 18 skills across 4 domains. Install the plugin once — the meta-inst
 | `ops-github-actions-audit` | Workflow security (pinning, permissions), speed (caching, matrix), correctness (concurrency, path filters) |
 | `ops-migration-writer` | Safe reversible migrations for any framework; explicit safety tier |
 
+### Personal (1)
+| Skill | Does |
+|---|---|
+| `job-hunter` | Remote cybersecurity job search (offensive/AppSec/research/cloud). Deterministic ATS discovery, eligibility filtering, explainable ranking and SQLite tracking; the LLM only reviews shortlisted jobs. Stdlib Python, offline tests. See `skills/job-hunter/SKILL.md`. |
+
+Not part of the stack-detection bundles: the meta-installer never recommends it.
+
 ## Install
 
 ```bash

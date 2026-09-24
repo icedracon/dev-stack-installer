@@ -1,0 +1,139 @@
+# Bundled defaults. Override any table in ~/.job-hunter/config/search.toml
+# (tables are deep-merged; lists are replaced, not appended).
+
+[run]
+default_count = 10          # jobs shown by `find` / `new` / `show`
+max_age_days = 60           # drop postings older than this (when a date is known)
+request_delay_seconds = 1.0 # politeness delay between requests to the same host
+timeout_seconds = 25
+max_response_mb = 25
+llm_digest_count = 15       # jobs included in `digest` (the only LLM-bound payload)
+apply_text_max_chars = 14000
+user_agent = "job-hunter/0.1 (personal job search tool)"
+
+[location]
+# How to treat "Remote - EMEA/Europe" style postings. Armenia is geographically
+# in EMEA but many "Europe remote" jobs only hire through EU/UK entities.
+region_remote_status = "uncertain"   # "uncertain" | "yes"
+# "Remote" with no country at all usually means "remote in the HQ country".
+unspecified_remote_status = "uncertain"
+show_ineligible = false               # keep "no" jobs out of default listings
+
+# Role categories: first match (in this order) wins. Patterns are case-insensitive regex.
+[[categories]]
+key = "redteam"
+tier = "primary"
+label = "Red Team"
+title_patterns = ['red\s*team', 'adversary (emulation|simulation)', 'purple team']
+
+[[categories]]
+key = "offensive"
+tier = "primary"
+label = "Offensive Security"
+title_patterns = ['offensive', 'exploit', 'attack (engineer|research)', 'ethical hack']
+
+[[categories]]
+key = "pentest"
+tier = "primary"
+label = "Pentest"
+title_patterns = ['penetration', 'pen\s*test', 'pentest']
+
+[[categories]]
+key = "research"
+tier = "primary"
+label = "Security/Vuln Research"
+title_patterns = ['vulnerability research', 'security research', 'threat research', 'vulnerability researcher', 'reverse engineer']
+
+[[categories]]
+key = "appsec"
+tier = "primary"
+label = "AppSec/ProdSec"
+title_patterns = ['application security', 'app\s*sec', 'product security', 'prod\s*sec', 'software security', 'secure code', 'security code review']
+
+[[categories]]
+key = "cloudsec"
+tier = "primary"
+label = "Cloud Security"
+title_patterns = ['cloud security', 'cloudsec', '(aws|azure|gcp|kubernetes) security', 'security.*\b(cloud|aws|azure|gcp)\b']
+
+[[categories]]
+key = "detection"
+tier = "secondary"
+label = "Detection/Response"
+title_patterns = ['detection', 'threat hunt', 'incident response', 'dfir', '\bd&r\b']
+
+[[categories]]
+key = "tooling"
+tier = "secondary"
+label = "Security Tooling"
+title_patterns = ['security (software|tooling|automation|platform|tools)', 'software engineer.*security', 'security.*(developer|sde)']
+
+[[categories]]
+key = "infrasec"
+tier = "secondary"
+label = "Infra Security"
+title_patterns = ['infrastructure security', 'infra.*security', 'network security', 'endpoint security', 'identity security', 'corporate security engineer']
+
+[[categories]]
+key = "security_engineer"
+tier = "secondary"
+label = "Security Engineer"
+title_patterns = ['security engineer', 'security specialist', 'security consultant', 'security analyst']
+
+[filters]
+# Titles matching any of these are dropped before any further processing.
+exclude_title_patterns = [
+  '\bsoc\b', 'security operations cent', '\b(tier|level|l) ?1\b', 'help ?desk', 'it support', 'service desk',
+  '\bgrc\b', 'governance', '\bcompliance\b', '\baudit', '\brisk\b', 'privacy',
+  'physical security', 'security (officer|guard)', 'loss prevention', 'executive protection',
+  '\bmanager\b', '\bdirector\b', '\bhead of\b', '\bvp\b', 'vice president', '\bchief\b', '\bciso\b',
+  'sales', 'account (executive|manager)', 'pre-?sales', 'solutions? (engineer|architect)', 'customer success',
+  'recruit', 'marketing', 'trust (&|and) safety', 'content moderat', 'fraud analyst',
+  '\bintern(ship)?\b', 'working student',
+]
+# Seniority levels that are dropped outright.
+exclude_seniority = ["executive"]
+# Jobs demanding at least this many years are dropped (unless title is primary tier
+# and skill overlap is high; see scoring.stretch_*).
+max_experience_years = 12
+
+[scoring]
+# Every component is additive and shown in `why <n>`. These numbers are starting
+# values, not truth: calibrate them after you have rejected/shortlisted ~30 jobs.
+role_primary = 25
+role_secondary = 14
+skills_max = 40              # scaled by weighted skill overlap (0..1)
+skills_unknown = 12          # used when no skills could be extracted
+location_yes = 12
+location_uncertain = 5
+experience_max = 10          # full points when you meet the requirement
+experience_per_year_gap = 4  # points lost per year short
+experience_unknown = 5
+experience_floor = -12
+seniority_staff_penalty = -8 # staff/principal/distinguished when you have < 8 yrs
+seniority_lead_penalty = -3
+salary_below_min = -12
+salary_meets_min = 3
+fresh_7d = 3
+fresh_30d = 1
+preferred_company = 5
+# Label thresholds (applied after eligibility gate).
+strong = 65
+strong_min_overlap = 0.5    # 'Strong' also requires this skill overlap (when skills are known)
+reasonable = 50
+stretch = 35
+stretch_gap_years = 3        # gap >= this with good overlap -> Stretch label
+stretch_min_overlap = 0.55
+
+[fx]
+# Approximate conversion to USD for salary floor checks only. Not live rates.
+USD = 1.0
+EUR = 1.08
+GBP = 1.27
+CHF = 1.12
+CAD = 0.73
+AUD = 0.66
+PLN = 0.25
+AMD = 0.0026
+ILS = 0.27
+SEK = 0.095

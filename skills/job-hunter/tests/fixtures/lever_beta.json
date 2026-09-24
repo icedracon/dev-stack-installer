@@ -1,0 +1,52 @@
+[
+ {
+  "id": "0a1b2c3d-0000-4000-8000-000000000001",
+  "text": "Cloud Security Engineer",
+  "hostedUrl": "https://jobs.lever.co/beta/0a1b2c3d-0000-4000-8000-000000000001",
+  "applyUrl": "https://jobs.lever.co/beta/0a1b2c3d-0000-4000-8000-000000000001/apply",
+  "createdAt": 1758300000000,
+  "workplaceType": "remote",
+  "categories": {
+   "location": "Remote - Europe",
+   "allLocations": [
+    "Remote - Europe"
+   ],
+   "team": "Security",
+   "commitment": "Full-time"
+  },
+  "descriptionPlain": "Join our cloud security team.\n",
+  "lists": [
+   {
+    "text": "Requirements",
+    "content": "<li>3+ years securing AWS or GCP</li><li>Kubernetes, Terraform, IAM</li><li>Python or Go</li>"
+   }
+  ],
+  "additionalPlain": "Candidates must be based in the EU.",
+  "salaryRange": {
+   "min": 80000,
+   "max": 110000,
+   "currency": "EUR",
+   "interval": "per-year-salary"
+  }
+ },
+ {
+  "id": "0a1b2c3d-0000-4000-8000-000000000002",
+  "text": "Penetration Tester",
+  "hostedUrl": "https://jobs.lever.co/beta/0a1b2c3d-0000-4000-8000-000000000002",
+  "createdAt": 1758400000000,
+  "workplaceType": "remote",
+  "categories": {
+   "location": "Remote - EMEA"
+  },
+  "descriptionPlain": "Remote across EMEA.",
+  "lists": [
+   {
+    "text": "You have",
+    "content": "<li>2+ years of penetration testing experience</li><li>Burp Suite, Active Directory, Python</li><li>OSCP</li>"
+   }
+  ]
+ },
+ {
+  "id": "bad"
+ }
+]

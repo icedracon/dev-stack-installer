@@ -1,0 +1,94 @@
+# Candidate profile TEMPLATE. `jh init` copies this to ~/.job-hunter/config/profile.toml.
+# Edit the copy, not this file. The copy lives outside the repo on purpose.
+#
+# HONESTY NOTE: when this skill was built, no memory or documents about the
+# candidate's experience were available. Every skill level below is a placeholder
+# (2 = "working knowledge") and years_experience is unknown. Until you edit your
+# copy and set `verified = true`, every listing prints a warning and experience
+# gaps are computed against an unknown value.
+
+[candidate]
+verified = false
+location_country = "Armenia"
+location_city = "Yerevan"
+timezone_utc_offset = 4
+years_experience = -1          # total professional security years; -1 = unknown
+work_authorization = ["Armenia"]   # countries where you can work without sponsorship
+citizenships = ["Armenia"]
+has_clearance = false
+willing_to_relocate = false
+min_salary_usd_year = 0        # 0 = no salary floor
+certifications = []            # only certs you actually hold, e.g. ["oscp"]
+
+[targets]
+# Category keys from search.toml [[categories]]. Primary gets role_primary points.
+primary = ["redteam", "offensive", "pentest", "research", "appsec", "cloudsec"]
+secondary = ["detection", "tooling", "infrasec", "security_engineer"]
+
+[companies]
+preferred = []   # company names; +points
+blocked = []     # company names; always hidden (also settable via `jh block <company>`)
+
+# Skill levels: 0 none, 1 familiar, 2 working, 3 strong, 4 expert.
+# Keys must exist in skills.toml [aliases]. Missing keys count as 0.
+[skills]
+active_directory = 2
+kerberos = 2
+adcs = 2
+windows_internals = 2
+windows_security = 2
+powershell = 2
+python = 2
+rust = 2
+red_team_ops = 2
+pentest = 2
+evasion = 1
+c2 = 1
+edr = 2
+siem = 2
+detection_engineering = 1
+reverse_engineering = 1
+exploit_development = 1
+vulnerability_research = 1
+bug_bounty = 1
+web_appsec = 2
+secure_code_review = 1
+threat_modeling = 1
+cloud_aws = 1
+cloud_azure = 1
+security_tooling = 2
+linux_security = 1
+network_security = 1
+
+# CV variants. Files live in ~/.job-hunter/cv/. Routing picks the variant whose
+# categories include the job's category, then breaks ties by emphasis-skill overlap.
+[[cv]]
+name = "redteam"
+file = "redteam.pdf"
+categories = ["redteam", "offensive", "pentest"]
+emphasis = ["active_directory", "kerberos", "adcs", "red_team_ops", "c2", "evasion", "windows_internals"]
+
+[[cv]]
+name = "appsec"
+file = "appsec.pdf"
+categories = ["appsec"]
+emphasis = ["web_appsec", "secure_code_review", "threat_modeling", "bug_bounty"]
+
+[[cv]]
+name = "research"
+file = "research.pdf"
+categories = ["research"]
+emphasis = ["vulnerability_research", "reverse_engineering", "exploit_development", "fuzzing", "rust"]
+
+[[cv]]
+name = "cloudsec"
+file = "cloudsec.pdf"
+categories = ["cloudsec"]
+emphasis = ["cloud_aws", "cloud_azure", "cloud_gcp", "kubernetes", "iam", "iac"]
+
+[[cv]]
+name = "security-engineer"
+file = "security-engineer.pdf"
+categories = ["detection", "tooling", "infrasec", "security_engineer"]
+emphasis = ["python", "rust", "powershell", "edr", "siem", "security_tooling"]
+default = true

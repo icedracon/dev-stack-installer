@@ -1,0 +1,33 @@
+{
+ "name": "Delta Security",
+ "jobs": [
+  {
+   "title": "Junior Penetration Tester",
+   "shortcode": "ABC123",
+   "telecommuting": true,
+   "url": "https://apply.workable.com/delta/j/ABC123/",
+   "application_url": "https://apply.workable.com/delta/j/ABC123/apply",
+   "published_on": "2026-09-10",
+   "locations": [
+    {
+     "country": "Armenia",
+     "city": "Yerevan",
+     "hidden": false
+    }
+   ],
+   "description": "<p>1+ years of pentest experience. Web application security, Burp.</p>"
+  },
+  {
+   "title": "GRC Specialist",
+   "shortcode": "XYZ999",
+   "telecommuting": false,
+   "url": "https://apply.workable.com/delta/j/XYZ999/",
+   "locations": [
+    {
+     "country": "Germany",
+     "city": "Berlin"
+    }
+   ]
+  }
+ ]
+}

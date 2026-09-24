@@ -1,0 +1,26 @@
+{
+ "id": "744000001",
+ "name": "Application Security Engineer",
+ "releasedDate": "2026-09-12T08:00:00.000Z",
+ "location": {
+  "city": "Bucharest",
+  "country": "ro",
+  "remote": true,
+  "fullLocation": "Remote, Romania"
+ },
+ "company": {
+  "name": "Epsilon"
+ },
+ "jobAd": {
+  "sections": {
+   "jobDescription": {
+    "title": "Job Description",
+    "text": "<p>AppSec for our products.</p>"
+   },
+   "qualifications": {
+    "title": "Qualifications",
+    "text": "<ul><li>3+ years application security experience</li><li>OWASP, SAST, threat modeling</li></ul>"
+   }
+  }
+ }
+}

@@ -9,3 +9,13 @@ dist/
 build/
 .env
 .env.local
+__pycache__/
+*.pyc
+.pytest_cache/
+# job-hunter: personal data must never be committed (it lives in ~/.job-hunter by default)
+*.db
+*.db-wal
+*.db-shm
+skills/job-hunter/config/profile.toml
+skills/job-hunter/cv/
+skills/job-hunter/state/

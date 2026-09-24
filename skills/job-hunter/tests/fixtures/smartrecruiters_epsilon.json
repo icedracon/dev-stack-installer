@@ -1,0 +1,30 @@
+{
+ "offset": 0,
+ "limit": 100,
+ "totalFound": 2,
+ "content": [
+  {
+   "id": "744000001",
+   "name": "Application Security Engineer",
+   "releasedDate": "2026-09-12T08:00:00.000Z",
+   "location": {
+    "city": "Bucharest",
+    "country": "ro",
+    "remote": true,
+    "fullLocation": "Remote, Romania"
+   },
+   "company": {
+    "name": "Epsilon"
+   }
+  },
+  {
+   "id": "744000002",
+   "name": "Marketing Manager",
+   "releasedDate": "2026-09-12T08:00:00.000Z",
+   "location": {
+    "city": "Paris",
+    "country": "fr"
+   }
+  }
+ ]
+}

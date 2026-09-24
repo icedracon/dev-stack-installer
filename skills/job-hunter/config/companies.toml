@@ -1,0 +1,217 @@
+# Seed list of ATS job boards to poll. Add your own in
+# ~/.job-hunter/config/companies.toml (same format; same ats+token overrides,
+# `enabled = false` disables a bundled entry) or with `jh sources add`.
+#
+# WARNING: these tokens are best-effort from the author's knowledge and could NOT
+# be verified when written (network egress was blocked). Companies switch ATS
+# vendors regularly. Run `jh sources verify` once; dead boards are reported and
+# auto-skipped after 3 consecutive failures.
+#
+# Selection bias: security-relevant employers with a history of remote hiring.
+# Being on this list says nothing about whether they hire in Armenia.
+#
+# ats: greenhouse | lever | ashby | workable | smartrecruiters | remotive
+
+# ---- Greenhouse (boards-api.greenhouse.io) ----
+[[boards]]
+ats = "greenhouse"
+token = "cloudflare"
+company = "Cloudflare"
+
+[[boards]]
+ats = "greenhouse"
+token = "gitlab"
+company = "GitLab"
+
+[[boards]]
+ats = "greenhouse"
+token = "canonical"
+company = "Canonical"
+
+[[boards]]
+ats = "greenhouse"
+token = "datadog"
+company = "Datadog"
+
+[[boards]]
+ats = "greenhouse"
+token = "okta"
+company = "Okta"
+
+[[boards]]
+ats = "greenhouse"
+token = "grafanalabs"
+company = "Grafana Labs"
+
+[[boards]]
+ats = "greenhouse"
+token = "elastic"
+company = "Elastic"
+
+[[boards]]
+ats = "greenhouse"
+token = "mongodb"
+company = "MongoDB"
+
+[[boards]]
+ats = "greenhouse"
+token = "wizinc"
+company = "Wiz"
+
+[[boards]]
+ats = "greenhouse"
+token = "hackerone"
+company = "HackerOne"
+
+[[boards]]
+ats = "greenhouse"
+token = "chainguard"
+company = "Chainguard"
+
+[[boards]]
+ats = "greenhouse"
+token = "tailscale"
+company = "Tailscale"
+
+[[boards]]
+ats = "greenhouse"
+token = "coinbase"
+company = "Coinbase"
+
+[[boards]]
+ats = "greenhouse"
+token = "chainalysis"
+company = "Chainalysis"
+
+[[boards]]
+ats = "greenhouse"
+token = "snyk"
+company = "Snyk"
+
+[[boards]]
+ats = "greenhouse"
+token = "bugcrowd"
+company = "Bugcrowd"
+
+[[boards]]
+ats = "greenhouse"
+token = "sentinellabs"
+company = "SentinelOne"
+
+[[boards]]
+ats = "greenhouse"
+token = "trailofbits"
+company = "Trail of Bits"
+
+[[boards]]
+ats = "greenhouse"
+token = "specterops"
+company = "SpecterOps"
+
+[[boards]]
+ats = "greenhouse"
+token = "doyensec"
+company = "Doyensec"
+
+# ---- Lever (api.lever.co; set region = "eu" for api.eu.lever.co) ----
+[[boards]]
+ats = "lever"
+token = "kraken"
+company = "Kraken"
+
+[[boards]]
+ats = "lever"
+token = "binance"
+company = "Binance"
+
+[[boards]]
+ats = "lever"
+token = "bishopfox"
+company = "Bishop Fox"
+
+[[boards]]
+ats = "lever"
+token = "huntress"
+company = "Huntress"
+
+[[boards]]
+ats = "lever"
+token = "picussecurity"
+company = "Picus Security"
+
+[[boards]]
+ats = "lever"
+token = "ledger"
+company = "Ledger"
+
+# ---- Ashby (api.ashbyhq.com posting API) ----
+[[boards]]
+ats = "ashby"
+token = "1password"
+company = "1Password"
+
+[[boards]]
+ats = "ashby"
+token = "semgrep"
+company = "Semgrep"
+
+[[boards]]
+ats = "ashby"
+token = "socket"
+company = "Socket"
+
+[[boards]]
+ats = "ashby"
+token = "sentry"
+company = "Sentry"
+
+[[boards]]
+ats = "ashby"
+token = "zama"
+company = "Zama"
+
+[[boards]]
+ats = "ashby"
+token = "cure53"
+company = "Cure53"
+enabled = false   # placeholder example of a disabled board
+
+# ---- Workable (apply.workable.com widget API) ----
+[[boards]]
+ats = "workable"
+token = "intigriti"
+company = "Intigriti"
+
+[[boards]]
+ats = "workable"
+token = "yeswehack"
+company = "YesWeHack"
+
+[[boards]]
+ats = "workable"
+token = "picsart"
+company = "Picsart"
+
+# ---- SmartRecruiters (api.smartrecruiters.com) ----
+[[boards]]
+ats = "smartrecruiters"
+token = "Bitdefender"
+company = "Bitdefender"
+
+[[boards]]
+ats = "smartrecruiters"
+token = "Visa"
+company = "Visa"
+enabled = false   # huge board, mostly irrelevant; enable if wanted
+
+# ---- Aggregators (lower trust: delayed, redirect apply links) ----
+[[boards]]
+ats = "remotive"
+token = "software-dev"
+company = "(Remotive)"
+note = "Remotive public API. ToS: do not poll more than a few times per day; links must credit Remotive."
+
+[[boards]]
+ats = "remotive"
+token = "devops"
+company = "(Remotive)"
